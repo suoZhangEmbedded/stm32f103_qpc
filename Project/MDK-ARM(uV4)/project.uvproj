@@ -377,7 +377,7 @@
               <MiscControls>--diag_suppress=870</MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F10X_MD</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\Libraries\CMSIS\Device\ST\STM32F10x\Include;..\..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\..\Libraries\STM32_USB-FS-Device_Driver\inc;..\..\Libraries\CMSIS\Include;..\..\User\bsp;..\..\User\bsp\inc;..\..\User\app\inc;..\..\User\FreeRTOS\Source\include;..\..\User\FreeRTOS\Source\portable\RVDS\ARM_CM3;..\..\User\SEGGER_RTT\RTT;..\..\User\MQTTClient-C\MQTTPacket\src;..\..\User\MQTTClient-C\src\FreeRTOS;..\..\User\MQTTClient-C\src;..\..\User\SFUD\inc;..\..\User\littlefs;..\..\User\minmea;..\..\User\uds-c\src;..\..\User\uds-c\deps</IncludePath>
+              <IncludePath>..\..\Libraries\CMSIS\Device\ST\STM32F10x\Include;..\..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\..\Libraries\STM32_USB-FS-Device_Driver\inc;..\..\Libraries\CMSIS\Include;..\..\User\bsp;..\..\User\bsp\inc;..\..\User\app\inc;..\..\User\FreeRTOS\Source\include;..\..\User\FreeRTOS\Source\portable\RVDS\ARM_CM3;..\..\User\SEGGER_RTT\RTT;..\..\User\qpc\include;..\..\User\qpc\ports\freertos;..\..\User\qpc\src</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -580,6 +580,81 @@
               <FileName>SEGGER_RTT_printf.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\User\SEGGER_RTT\RTT\SEGGER_RTT_printf.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>qp_qf</GroupName>
+          <Files>
+            <File>
+              <FileName>qep_hsm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\qpc\src\qf\qep_hsm.c</FilePath>
+            </File>
+            <File>
+              <FileName>qep_msm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\qpc\src\qf\qep_msm.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_act.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\qpc\src\qf\qf_act.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_actq.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\qpc\src\qf\qf_actq.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_defer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\qpc\src\qf\qf_defer.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_dyn.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\qpc\src\qf\qf_dyn.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_mem.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\qpc\src\qf\qf_mem.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_ps.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\qpc\src\qf\qf_ps.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_qact.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\qpc\src\qf\qf_qact.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_qeq.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\qpc\src\qf\qf_qeq.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_qmact.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\qpc\src\qf\qf_qmact.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_time.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\qpc\src\qf\qf_time.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>qp_port</GroupName>
+          <Files>
+            <File>
+              <FileName>qf_port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\qpc\ports\freertos\qf_port.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1158,6 +1233,81 @@
               <FileName>SEGGER_RTT_printf.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\User\SEGGER_RTT\RTT\SEGGER_RTT_printf.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>qp_qf</GroupName>
+          <Files>
+            <File>
+              <FileName>qep_hsm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\qpc\src\qf\qep_hsm.c</FilePath>
+            </File>
+            <File>
+              <FileName>qep_msm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\qpc\src\qf\qep_msm.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_act.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\qpc\src\qf\qf_act.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_actq.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\qpc\src\qf\qf_actq.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_defer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\qpc\src\qf\qf_defer.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_dyn.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\qpc\src\qf\qf_dyn.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_mem.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\qpc\src\qf\qf_mem.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_ps.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\qpc\src\qf\qf_ps.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_qact.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\qpc\src\qf\qf_qact.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_qeq.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\qpc\src\qf\qf_qeq.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_qmact.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\qpc\src\qf\qf_qmact.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_time.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\qpc\src\qf\qf_time.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>qp_port</GroupName>
+          <Files>
+            <File>
+              <FileName>qf_port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\qpc\ports\freertos\qf_port.c</FilePath>
             </File>
           </Files>
         </Group>
