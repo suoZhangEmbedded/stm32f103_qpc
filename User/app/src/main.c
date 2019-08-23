@@ -17,6 +17,8 @@
 #include "SEGGER_RTT.h"
 #include "stdio.h"
 
+#include "bsp_led.h"
+
 /**
  * 重定义fputc函数
  *
@@ -55,16 +57,23 @@ int main(void)
 
 void vApplicationStackOverflowHook( TaskHandle_t xTask, signed char * pcTaskName )
 {
-
+	
+	printf( "vApplicationStackOverflowHook.\r\n" );
+		
 	while(1);
 	
 }
 
 void led_task( void *pvParameters )
 {
+	
+	bsp_led_init();
 
 	for(;;)
 	{
+	
+		bsp_led_toggle( e_led_red_system_status );
+		
 		printf( "tick:%u,system heap:%u.\r\n", xTaskGetTickCount(), xPortGetFreeHeapSize() );
 		
 		vTaskDelay(1000 / portTICK_PERIOD_MS);
