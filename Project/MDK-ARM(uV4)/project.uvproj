@@ -436,6 +436,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\User\bsp\bsp_led.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\bsp\bsp_adc.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -510,6 +515,11 @@
               <FileName>stm32f10x_can.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1014,6 +1024,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\User\bsp\bsp_led.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\bsp\bsp_adc.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1088,6 +1103,11 @@
               <FileName>stm32f10x_can.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.c</FilePath>
             </File>
           </Files>
         </Group>

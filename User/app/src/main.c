@@ -18,6 +18,7 @@
 #include "stdio.h"
 
 #include "bsp_led.h"
+#include "bsp_adc.h"
 
 /**
  * 重定义fputc函数
@@ -68,13 +69,23 @@ void led_task( void *pvParameters )
 {
 	
 	bsp_led_init();
+	bsp_adc_init();
 
+	float value = 0;
+	
+	uint16_t adc_value = 0;
+	
 	for(;;)
 	{
-	
+		adc_value = bsp_get_adc_value( 1 );
+		
+//		value =((float)adc_value*(5.0/4096))*0.36-1.08;
+		value = (float)adc_value/4096*3.3;
+		printf( "tick:%u,adc value:%f.\r\n", xTaskGetTickCount(), value );
+		
 		bsp_led_toggle( e_led_red_system_status );
 		
-		printf( "tick:%u,system heap:%u.\r\n", xTaskGetTickCount(), xPortGetFreeHeapSize() );
+//		printf( "tick:%u,system heap:%u.\r\n", xTaskGetTickCount(), xPortGetFreeHeapSize() );
 		
 		vTaskDelay(1000 / portTICK_PERIOD_MS);
 		
