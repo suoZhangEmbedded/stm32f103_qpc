@@ -20,6 +20,8 @@
 #include "bsp_led.h"
 #include "bsp_adc.h"
 
+#include "math.h"
+
 /**
  * 重定义fputc函数
  *
@@ -71,7 +73,8 @@ void led_task( void *pvParameters )
 	bsp_led_init();
 	bsp_adc_init();
 
-	float value = 0;
+	double value = 0;
+	double ppm = 0;
 	
 	uint16_t adc_value = 0;
 	
@@ -82,6 +85,9 @@ void led_task( void *pvParameters )
 //		value =((float)adc_value*(5.0/4096))*0.36-1.08;
 		value = (float)adc_value/4096*3.3;
 		printf( "tick:%u,adc value:%f.\r\n", xTaskGetTickCount(), value );
+		
+		ppm = pow(11.5428 * 35.904 * value/(25.5-5.1* value),0.6549);
+		printf( "tick:%u,ppm value:%f ppm.\r\n", xTaskGetTickCount(), ppm );
 		
 		bsp_led_toggle( e_led_red_system_status );
 		
